@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULIR PEMESANAN</title>
+    <link rel="stylesheet" type="text/css" href="./styel.css"> 
+    
+</head>
+<body>
+    <div class="registration-form">
+        <h1>FORMULIR PEMESANAN </h1>
+        <h1>TIKET KERETA API</h1>
+        <br>
+        <form action="selesai.html">
+            <fieldset>
+                <br>
+                <h2>Informasi Penumpang</h2>
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" name="nama" id="nama" required autofocus>
+                </div>
+
+                <div class="form-group">
+                    <label for="ktp">Nomor identitas (NIK)</label>
+                    <input type="text" name="ktp" id="ktp" placeholder="Masukan Nomor anda" pattern="[0-9]{16}" required title="Harus Diisi dengan 16 angka">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="email" required>
+                </div>
+
+                <div class="radio-group">
+                    <label for="jk">Jenis Kelamin:</label>
+                    <input type="radio" name="jk" id="Laki-laki" value="Laki-laki">
+                    <label for="Laki-laki">Laki-laki</label>
+                    <input type="radio" name="jk" id="Perempuan" value="Perempuan">
+                    <label for="Perempuan">Perempuan</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="nomor">NOMOR TELEPON</label>
+                    <input type="text" name="nomor" id="nomor" placeholder="Masukan Nomor anda" required title="Harus Diisi dengan angka">
+                </div>
+                <br>
+
+                <h2>Informasi Perjalanan</h2>
+
+                <div class="form-group">
+                    <label for="stasiun-berangkat">Stasiun Keberangkatan</label>
+                    <input type="text" name="stasiun-berangkat" id="stasiun-berangkat" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="stasiun-tujuan">Stasiun Tujuan:</label>
+                    <input type="text" id="stasiun-tujuan" name="stasiun-tujuan" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tanggal-keberangkatan">Tanggal Keberangkatan:</label>
+                    <input type="date" id="tanggal-keberangkatan" name="tanggal-keberangkatan" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="waktu-keberangkatan">Waktu Keberangkatan:</label>
+                    <select id="waktu-keberangkatan" name="waktu-keberangkatan" required>
+                        <option value="">Pilih Waktu</option>
+                        <option value="pagi">Pagi</option>
+                        <option value="siang">Siang</option>
+                        <option value="sore">Sore</option>
+                        <option value="malam">Malam</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="kelas-kereta">Kelas Kereta:</label>
+                    <select id="kelas-kereta" name="kelas-kereta" required>
+                        <option value="">Pilih Kelas</option>
+                        <option value="eksekutif">Eksekutif</option>
+                        <option value="bisnis">Bisnis</option>
+                        <option value="ekonomi">Ekonomi</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="jumlah-dewasa">Jumlah Penumpang Dewasa:</label>
+                    <input type="number" id="jumlah-dewasa" name="jumlah-dewasa" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="jumlah-anak">Jumlah Penumpang Anak-anak:</label>
+                    <input type="number" id="jumlah-anak" name="jumlah-anak" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="jumlah-bayi">Jumlah Penumpang Bayi:</label>
+                    <input type="number" id="jumlah-bayi" name="jumlah-bayi" min="0">
+                </div>
+                <br>
+                <h2>Layanan Tambahan</h2>
+                <h3>Pilihan Makanan atau Minuman:</h3>
+                <div class="option-group">
+                    <label>
+                        <input type="checkbox" name="makanan[]" value="nasi-goreng">
+                        Nasi Goreng
+                    </label>
+                    <label>
+                        <input type="checkbox" name="makanan[]" value="mie-goreng">
+                        Mie Goreng
+                    </label>
+                    <label>
+                        <input type="checkbox" name="makanan[]" value="ayam-bakar">
+                        Ayam Bakar
+                    </label>
+                    <label>
+                        <input type="checkbox" name="minuman[]" value="air-mineral">
+                        Air Mineral
+                    </label>
+                    <label>
+                        <input type="checkbox" name="minuman[]" value="kopi">
+                        Kopi
+                    </label>
+                    <label>
+                        <input type="checkbox" name="minuman[]" value="teh-manis">
+                        Teh Manis
+                    </label>
+                </div>
+               
+
+                <h3>Asuransi Perjalanan:</h3>
+                <div class="option-group">
+                    <label>
+                        <input type="radio" name="asuransi" value="ya">
+                        Ya, tambahkan asuransi perjalanan (+Rp 50.000)
+                    </label>
+                    <label>
+                        <input type="radio" name="asuransi" value="tidak" checked>
+                        Tidak, tanpa asuransi perjalanan
+                    </label>
+                </div>
+                <input type="submit" value="kirim">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
